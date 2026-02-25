@@ -123,6 +123,99 @@ app.post('/api/chat', async (req, res) => {
   });
 });
 
+// ─── Push Notification Token Registration ───────────────────
+
+// In-memory store — replace with Supabase in production
+const pushTokens = new Set();
+
+/**
+ * POST /api/push/register
+ * Registers an Expo push token so we can send spending alerts.
+ */
+app.post('/api/push/register', (req, res) => {
+  const { pushToken } = req.body;
+  if (!pushToken) return res.status(400).json({ error: 'pushToken required' });
+  pushTokens.add(pushToken);
+  console.log(`[Push] Registered token: ${pushToken}`);
+  res.json({ success: true });
+});
+
+// ─── Plaid Webhooks ──────────────────────────────────────────
+
+/**
+ * POST /api/plaid/webhook
+ * Receives webhook events from Plaid when new transactions are detected.
+ * This is how we catch Google Pay, Apple Pay, and all other transactions
+ * in real-time — Plaid sees them the moment they hit the bank.
+ */
+app.post('/api/plaid/webhook', async (req, res) => {
+  const { webhook_type, webhook_code, item_id, new_transactions } = req.body;
+  console.log(`[Plaid Webhook] ${webhook_type}:${webhook_code}`);
+
+  // TODO: Verify webhook signature with Plaid
+
+  if (webhook_type === 'TRANSACTIONS' && webhook_code === 'DEFAULT_UPDATE') {
+    // New transactions detected — evaluate and send push notification
+    console.log(`[Plaid Webhook] ${new_transactions} new transactions for item ${item_id}`);
+
+    // TODO: Fetch the new transactions from Plaid
+    // TODO: Run decision engine on each transaction
+    // TODO: Send push notification with vibe check
+
+    // Placeholder: send a push notification for the new transactions
+    await sendSpendingAlert({
+      merchantName: 'New Purchase',
+      amount: 0,
+      vibe: 'yellow',
+      message: 'New transaction detected — checking your vibe...',
+    });
+  }
+
+  res.json({ received: true });
+});
+
+/**
+ * Sends a spending alert push notification to all registered devices.
+ */
+async function sendSpendingAlert({ merchantName, amount, vibe, message }) {
+  const vibeEmoji = { green: '\u{1F7E2}', yellow: '\u{1F7E1}', red: '\u{1F534}' };
+  const title = vibe === 'red'
+    ? "\u{1F6D1} Dog. Don't do it."
+    : vibe === 'yellow'
+      ? '\u{1F436} Heads up...'
+      : '\u{1F436} All good!';
+
+  const body = amount > 0
+    ? `${merchantName}: -$${amount.toFixed(2)} — ${message}`
+    : message;
+
+  const pushMessages = [...pushTokens].map((token) => ({
+    to: token,
+    sound: 'default',
+    title,
+    body,
+    data: { vibe, merchantName, amount },
+    channelId: 'spending-alerts',
+  }));
+
+  if (pushMessages.length === 0) return;
+
+  // Send via Expo Push API
+  try {
+    await fetch('https://exp.host/--/api/v2/push/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(pushMessages),
+    });
+    console.log(`[Push] Sent alert to ${pushMessages.length} device(s)`);
+  } catch (err) {
+    console.error('[Push] Failed to send:', err.message);
+  }
+}
+
 // ─── Start server ────────────────────────────────────────────
 
 app.listen(PORT, () => {

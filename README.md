@@ -57,6 +57,42 @@ backend/             Node.js backend (Express)
 2. **Visit a checkout page** (Amazon cart, Target checkout, etc.) — the notification bubble will appear
 3. **Click the bubble** to open the mini chat and ask about your spending
 
+## Dog Don't Do It — Mobile App (React Native)
+
+Cross-platform mobile app that catches you **every time you spend** — not just on checkout pages. Uses Plaid transaction webhooks to detect purchases made through Google Pay, Apple Pay, card taps, or any payment method. Fires a push notification with your vibe check within seconds of the charge hitting your bank.
+
+### How It Catches Every Payment
+
+```
+You tap Google Pay → Bank processes charge → Plaid detects transaction →
+Backend webhook fires → Decision engine evaluates → Push notification sent →
+"Dog. Don't do it." appears on your phone
+```
+
+### Mobile Structure
+
+```
+mobile/                React Native (Expo)
+  app/
+    _layout.tsx        Root layout + notification setup
+    index.tsx          Dashboard — vibe card, balance, recent transactions
+    transactions.tsx   Full transaction feed with category filters
+    chat.tsx           "Ask Dog" — chat with AI about your spending
+    connect.tsx        Plaid bank connection flow
+  components/
+    SpendingAlert.tsx  Full-screen spending alert overlay (triggered by push)
+  lib/
+    api.ts             Backend API client
+    notifications.ts   Push notification registration + handlers
+    vibes.ts           Vibe level config (colors, messages, logic)
+```
+
+### Mobile Quick Start
+
+1. `cd mobile && npm install`
+2. `npx expo start`
+3. Scan QR code with Expo Go on your phone
+
 ### Status
 
 - [x] Chrome extension shell (Manifest V3)
@@ -65,7 +101,15 @@ backend/             Node.js backend (Express)
 - [x] Mini chat window with placeholder responses
 - [x] Extension popup with status display
 - [x] Backend API stubs (Plaid, Claude, decision engine)
-- [ ] Plaid integration (bank account connection)
+- [x] React Native mobile app (Expo)
+- [x] Dashboard with vibe card, balance, and spending summary
+- [x] Transaction feed with category filters
+- [x] "Ask Dog" chat screen
+- [x] Bank connection flow (Plaid Link ready)
+- [x] Push notification infrastructure
+- [x] Plaid webhook endpoint for real-time transaction detection
+- [x] Spending alert overlay with haptic feedback
+- [ ] Plaid API keys + live bank connection
 - [ ] Claude API integration (AI chat with financial context)
 - [ ] Real decision engine (balance, spending pace, recurring charges)
 - [ ] Supabase user data storage
