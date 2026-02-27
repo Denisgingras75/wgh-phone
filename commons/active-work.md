@@ -8,8 +8,8 @@ Who's working on what right now. Auto-updated by hooks.
 
 **Status:** Active
 **Last active:** 2026-02-27
-**Current work:** API layer change — curatorsApi.js
-**Recent changes:** API layer: whats-good-here/src/api/curatorsApi.js
+**Current work:** API layer change — index.js
+**Recent changes:** API layer: whats-good-here/src/api/index.js
 
 ## Dan's Claude
 
