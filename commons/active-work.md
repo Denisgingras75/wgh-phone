@@ -8,8 +8,8 @@ Who's working on what right now. Auto-updated by hooks.
 
 **Status:** Active
 **Last active:** 2026-02-27
-**Current work:** Claude config change — denis-vision.md
-**Recent changes:** Claude config: .claude/projects/-Users-denisgingras/memory/denis-vision.md
+**Current work:** Claude config change — MEMORY.md
+**Recent changes:** Claude config: .claude/projects/-Users-denisgingras/memory/MEMORY.md
 
 ## Dan's Claude
 
