@@ -8,8 +8,8 @@ Who's working on what right now. Auto-updated by hooks.
 
 **Status:** Active
 **Last active:** 2026-02-27
-**Current work:** Claude config change — chat.html
-**Recent changes:** Claude config: .claude/hotline/chat.html
+**Current work:** Claude config change — imperative-sleeping-hennessy.md
+**Recent changes:** Claude config: .claude/plans/imperative-sleeping-hennessy.md
 
 ## Dan's Claude
 
