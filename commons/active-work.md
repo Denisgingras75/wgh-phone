@@ -8,8 +8,8 @@ Who's working on what right now. Auto-updated by hooks.
 
 **Status:** Active
 **Last active:** 2026-02-27
-**Current work:** Claude config change — settings.json
-**Recent changes:** Claude config: .claude/settings.json
+**Current work:** Claude config change — TODO.md
+**Recent changes:** Claude config: .claude/projects/-Users-denisgingras/memory/TODO.md
 
 ## Dan's Claude
 
