@@ -8,8 +8,8 @@ Who's working on what right now. Auto-updated by hooks.
 
 **Status:** Active
 **Last active:** 2026-02-27
-**Current work:** Claude config change — package.json
-**Recent changes:** Claude config: .claude/mcp-servers/agent-chat/package.json
+**Current work:** Shared component change — TrustBadge.jsx
+**Recent changes:** Shared component: whats-good-here/src/components/TrustBadge.jsx
 
 ## Dan's Claude
 
