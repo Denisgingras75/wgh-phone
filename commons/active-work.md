@@ -8,8 +8,8 @@ Who's working on what right now. Auto-updated by hooks.
 
 **Status:** Active
 **Last active:** 2026-02-27
-**Current work:** Shared hook change — useCurators.js
-**Recent changes:** Shared hook: whats-good-here/src/hooks/useCurators.js
+**Current work:** Shared component change — CuratorCard.jsx
+**Recent changes:** Shared component: whats-good-here/src/components/home/CuratorCard.jsx
 
 ## Dan's Claude
 
