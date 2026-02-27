@@ -8,8 +8,8 @@ Who's working on what right now. Auto-updated by hooks.
 
 **Status:** Active
 **Last active:** 2026-02-27
-**Current work:** Migration change — add_agent_chat_tables.sql
-**Recent changes:** Migration: whats-good-here/supabase/migrations/add_agent_chat_tables.sql
+**Current work:** Page change — Dish.jsx
+**Recent changes:** Page: whats-good-here/src/pages/Dish.jsx
 
 ## Dan's Claude
 
