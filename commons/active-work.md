@@ -8,8 +8,8 @@ Who's working on what right now. Auto-updated by hooks.
 
 **Status:** Active
 **Last active:** 2026-02-27
-**Current work:** Shared component change — ReviewFlow.jsx
-**Recent changes:** Shared component: whats-good-here/src/components/ReviewFlow.jsx
+**Current work:** Shared component change — SessionCard.jsx
+**Recent changes:** Shared component: whats-good-here/src/components/jitter/SessionCard.jsx
 
 ## Dan's Claude
 
