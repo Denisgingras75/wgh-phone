@@ -8,8 +8,8 @@ Who's working on what right now. Auto-updated by hooks.
 
 **Status:** Active
 **Last active:** 2026-02-27
-**Current work:** Shared component change — TrustBadge.jsx
-**Recent changes:** Shared component: whats-good-here/src/components/TrustBadge.jsx
+**Current work:** API layer change — votesApi.js
+**Recent changes:** API layer: whats-good-here/src/api/votesApi.js
 
 ## Dan's Claude
 
