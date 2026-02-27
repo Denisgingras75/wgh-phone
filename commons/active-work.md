@@ -8,8 +8,8 @@ Who's working on what right now. Auto-updated by hooks.
 
 **Status:** Active
 **Last active:** 2026-02-27
-**Current work:** Shared hook change — usePurityTracker.js
-**Recent changes:** Shared hook: whats-good-here/src/hooks/usePurityTracker.js
+**Current work:** Schema change — schema.sql
+**Recent changes:** Schema: whats-good-here/supabase/schema.sql
 
 ## Dan's Claude
 
