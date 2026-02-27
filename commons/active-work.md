@@ -8,8 +8,8 @@ Who's working on what right now. Auto-updated by hooks.
 
 **Status:** Active
 **Last active:** 2026-02-27
-**Current work:** API layer change — jitterApi.js
-**Recent changes:** API layer: whats-good-here/src/api/jitterApi.js
+**Current work:** Claude config change — server.js
+**Recent changes:** Claude config: .claude/mcp-servers/agent-chat/server.js
 
 ## Dan's Claude
 
