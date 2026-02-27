@@ -8,8 +8,8 @@ Who's working on what right now. Auto-updated by hooks.
 
 **Status:** Active
 **Last active:** 2026-02-27
-**Current work:** Claude config change — migration-v3.sql
-**Recent changes:** Claude config: .claude/hotline/migration-v3.sql
+**Current work:** Page change — Profile.jsx
+**Recent changes:** Page: whats-good-here/src/pages/Profile.jsx
 
 ## Dan's Claude
 
