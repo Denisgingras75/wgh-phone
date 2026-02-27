@@ -8,8 +8,8 @@ Who's working on what right now. Auto-updated by hooks.
 
 **Status:** Active
 **Last active:** 2026-02-27
-**Current work:** Shared component change — JitterInput.jsx
-**Recent changes:** Shared component: whats-good-here/src/components/jitter/JitterInput.jsx
+**Current work:** Claude config change — purring-churning-flamingo.md
+**Recent changes:** Claude config: .claude/plans/purring-churning-flamingo.md
 
 ## Dan's Claude
 
