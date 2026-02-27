@@ -8,8 +8,8 @@ Who's working on what right now. Auto-updated by hooks.
 
 **Status:** Active
 **Last active:** 2026-02-27
-**Current work:** Claude config change — purring-churning-flamingo.md
-**Recent changes:** Claude config: .claude/plans/purring-churning-flamingo.md
+**Current work:** Schema change — schema.sql
+**Recent changes:** Schema: whats-good-here/supabase/schema.sql
 
 ## Dan's Claude
 
