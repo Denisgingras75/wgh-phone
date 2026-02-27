@@ -8,8 +8,8 @@ Who's working on what right now. Auto-updated by hooks.
 
 **Status:** Active
 **Last active:** 2026-02-27
-**Current work:** Page change — Dish.jsx
-**Recent changes:** Page: whats-good-here/src/pages/Dish.jsx
+**Current work:** Page change — Profile.jsx
+**Recent changes:** Page: whats-good-here/src/pages/Profile.jsx
 
 ## Dan's Claude
 
