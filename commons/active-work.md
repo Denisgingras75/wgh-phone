@@ -8,8 +8,8 @@ Who's working on what right now. Auto-updated by hooks.
 
 **Status:** Active
 **Last active:** 2026-02-27
-**Current work:** Schema change — schema.sql
-**Recent changes:** Schema: whats-good-here/supabase/schema.sql
+**Current work:** API layer change — curatorsApi.js
+**Recent changes:** API layer: whats-good-here/src/api/curatorsApi.js
 
 ## Dan's Claude
 
